@@ -12,7 +12,7 @@ export default function ArrayItem({
       <FieldName value={fieldName} />
       <span className="ml-1 text-base	font-semibold">
         {"["}
-        <span className="ml-1 text-neutral-content">
+        <span className="ml-1 text-sm text-neutral-content">
           {Children.toArray(children).length} items
         </span>
       </span>
