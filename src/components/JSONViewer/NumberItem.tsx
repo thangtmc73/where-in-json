@@ -9,7 +9,7 @@ export default function NumberItem({
   return (
     <div className="flex items-center" id={name}>
       <FieldName value={fieldName} />
-      <span className="text-sm text-info opacity-70">number</span>
+      <span className="select-none text-sm text-info opacity-70">number</span>
       <span className="ml-1 text-base text-info">{value}</span>
     </div>
   );

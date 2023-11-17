@@ -9,9 +9,11 @@ export default function StringItem({
   return (
     <div className="flex items-center" id={name}>
       <FieldName value={fieldName} />
-      <span className="text-sm text-base-content opacity-70">string</span>
-      <span className="ml-1 flex text-base text-base-content">
-        "<span>{value}</span>"
+      <span className="select-none text-sm text-base-content	opacity-70">
+        string
+      </span>
+      <span className="ml-1 flex select-none text-base text-base-content">
+        "<span className="select-text">{value}</span>"
       </span>
     </div>
   );

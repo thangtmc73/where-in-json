@@ -13,7 +13,7 @@ export default function ObjectItem({
       <div id={name}>
         <FieldName value={fieldName} />
         <span className="text-base font-semibold">
-          {"{"}
+          <span className="select-none">{"{"}</span>
           <button
             className="ml-1 inline-flex h-5 w-5 items-center justify-center rounded-sm border-2 border-solid border-base-300 align-bottom text-base-content"
             onClick={() => setCollapsed(true)}
@@ -33,7 +33,7 @@ export default function ObjectItem({
         <div className="border-l-2 border-dashed border-base-300 pl-6">
           {children}
         </div>
-        <span className="text-base font-semibold">{"}"}</span>
+        <span className="select-none text-base font-semibold">{"}"}</span>
       </div>
     );
   }
@@ -41,7 +41,9 @@ export default function ObjectItem({
     <div id={name}>
       <FieldName value={fieldName} />
       <span className="text-base font-semibold">
-        {"{...}"}
+        <span className="select-none" onClick={() => setCollapsed(false)}>
+          {"{...}"}
+        </span>
         <button
           className="ml-1 inline-flex h-5 w-5 items-center justify-center rounded-sm border-2 border-solid border-base-300 align-bottom text-base-content"
           onClick={() => setCollapsed(false)}

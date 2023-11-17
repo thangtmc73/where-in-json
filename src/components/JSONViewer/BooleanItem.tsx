@@ -9,7 +9,9 @@ export default function BooleanItem({
   return (
     <div className="flex items-center" id={name}>
       <FieldName value={fieldName} />
-      <span className="text-sm text-secondary opacity-70">boolean</span>
+      <span className="select-none text-sm text-secondary opacity-70">
+        boolean
+      </span>
       <span className="ml-1 text-base text-secondary">
         {value ? "true" : "false"}
       </span>

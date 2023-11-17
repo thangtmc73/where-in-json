@@ -13,7 +13,7 @@ export default function ArrayItem({
       <div className="w-full" id={name}>
         <FieldName value={fieldName} />
         <span className="text-base font-semibold text-teal-500">
-          {"["}
+          <span className="select-none">{"["}</span>
           <button
             className="ml-1 inline-flex h-5 w-5 items-center justify-center rounded-sm border-2 border-solid border-base-300 align-bottom text-base-content"
             onClick={() => setCollapsed(true)}
@@ -34,7 +34,9 @@ export default function ArrayItem({
         <div className="border-l-2 border-dashed border-base-300 pl-6">
           {children}
         </div>
-        <span className="text-base font-semibold text-teal-500">{"]"}</span>
+        <span className="select-none text-base font-semibold text-teal-500">
+          {"]"}
+        </span>
       </div>
     );
   }
@@ -42,7 +44,9 @@ export default function ArrayItem({
     <div className="w-full" id={name}>
       <FieldName value={fieldName} />
       <span className="text-base font-semibold text-teal-500">
-        <span onClick={() => setCollapsed(false)}>{"[...]"}</span>
+        <span className="select-none" onClick={() => setCollapsed(false)}>
+          {"[...]"}
+        </span>
         <button
           className="ml-1 inline-flex h-5 w-5 items-center justify-center rounded-sm border-2 border-solid border-base-300 align-bottom text-base-content"
           onClick={() => setCollapsed(false)}
@@ -70,7 +74,7 @@ export default function ArrayItem({
 
 function renderNumberOfItems(value: number) {
   return (
-    <span className="ml-1 bg-base-200 p-1 text-sm text-base-content">
+    <span className="ml-1 select-none bg-base-200 p-1 text-sm text-base-content">
       {value} items
     </span>
   );
