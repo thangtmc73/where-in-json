@@ -33,6 +33,7 @@ function App() {
             className="h-300px textarea textarea-primary h-3/6 w-full	"
             placeholder="Input the raw JSON"
             onChange={onInputChange}
+            value={content}
           />
         </div>
         <div className="h-full flex-1 overflow-hidden p-4">
